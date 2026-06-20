@@ -3,6 +3,27 @@
 'require view';
 'require poll';
 'require ui';
+'require rpc';
+
+var callServiceList = rpc.declare({
+	object: 'service',
+	method: 'list',
+	params: ['name'],
+	expect: { '': {} }
+});
+
+function getServiceStatus() {
+	return L.resolveDefault(callServiceList('uugamebooster'), {}).then(function(res) {
+		var instances = res['uugamebooster'] && res['uugamebooster']['instances'];
+		if (instances) {
+			for (var key in instances) {
+				if (instances[key] && instances[key].running)
+					return true;
+			}
+		}
+		return false;
+	});
+}
 
 return view.extend({
 	render: function() {
@@ -36,11 +57,10 @@ return view.extend({
 		};
 
 		poll.add(function() {
-			return L.Request.get(L.url('admin/services/uugamebooster/status')).then(function(res) {
-				var data = res.json();
+			return getServiceStatus().then(function(running) {
 				var node = document.getElementById('uugamebooster_status');
 				if (node) {
-					if (data.running) {
+					if (running) {
 						node.innerHTML = '<em><b><font color="green">UU GameAcc ' + _('RUNNING') + '</font></b></em>';
 					} else {
 						node.innerHTML = '<em><b><font color="red">UU GameAcc ' + _('NOT RUNNING') + '</font></b></em>';
