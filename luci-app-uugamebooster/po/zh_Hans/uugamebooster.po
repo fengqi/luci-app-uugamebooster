@@ -9,7 +9,7 @@ msgstr ""
 msgid "Enable"
 msgstr "启用"
 
-#: htdocs/luci-static/resources/controller/uugamebooster.js:10
+#: root/usr/share/luci/menu.d/luci-app-uugamebooster.json:3
 msgid "UU GameAcc"
 msgstr "UU游戏加速器"
 
