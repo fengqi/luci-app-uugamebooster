@@ -6,7 +6,7 @@ function index()
 	end
 
 	local page
-	page = entry({"admin", "services", "uugamebooster"}, cbi("uugamebooster/uugamebooster"), ("UU GameAcc"), 99)
+	page = entry({"admin", "services", "uugamebooster"}, form("uugamebooster/uugamebooster"), ("UU GameAcc"), 99)
 	page.dependent = false
 	page.acl_depends = {"luci-app-uugamebooster"}
 

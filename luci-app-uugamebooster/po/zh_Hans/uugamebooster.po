@@ -1,11 +1,46 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_Hans\n"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:24
 msgid "Enable"
 msgstr "启用"
 
+#: luasrc/controller/uugamebooster.lua:9
 msgid "UU GameAcc"
 msgstr "UU游戏加速器"
 
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:11
 msgid "UU Game Accelerator"
 msgstr "UU游戏加速器"
 
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:11
 msgid "A Paid Game Acceleration service"
 msgstr "一个付费主机游戏加速器 (开启服务后，使用手机APP绑定路由器并指定加速主机)"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:13
+msgid "Status"
+msgstr "状态"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:16
+msgid "Collecting data..."
+msgstr "正在收集数据..."
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:20
+msgid "Settings"
+msgstr "设置"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:28
+msgid "QR Code"
+msgstr "二维码"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:44
+msgid "RUNNING"
+msgstr "运行中"
+
+#: htdocs/luci-static/resources/view/uugamebooster/uugamebooster.js:46
+msgid "NOT RUNNING"
+msgstr "未运行"
